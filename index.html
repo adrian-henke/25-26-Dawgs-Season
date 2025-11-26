@@ -11,19 +11,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
+
+        .frame-wrapper {
+            width: 90vw;        /* takes up 90% of the screen width */
+            height: 90vh;       /* takes up 90% of the screen height */
+            max-width: 1200px;  /* optional max width */
+            max-height: 800px;  /* optional max height */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
         iframe {
+            width: 100%;
+            height: 100%;
             border: none;
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
         }
     </style>
 </head>
 <body>
-    <iframe 
-        src="https://lookerstudio.google.com/embed/reporting/a00345f1-f689-474f-a4de-457951286fc0/page/4G4TE"
-        allowfullscreen>
-    </iframe>
+    <div class="frame-wrapper">
+        <iframe 
+            src="https://lookerstudio.google.com/embed/reporting/a00345f1-f689-474f-a4de-457951286fc0/page/4G4TE"
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
